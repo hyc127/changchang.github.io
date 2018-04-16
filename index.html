@@ -167,7 +167,7 @@ a {
     color: rgba(225, 225, 225, 0.8);
 }
 
-@media only screen and(max-width: 374px) {
+@media only screen and (max-width: 374px) {
     .bestlove {
         font-size: 12px;
     }
@@ -227,6 +227,12 @@ a {
 
 .hid {
     display: none;
+}
+
+@media only screen and (max-width: 812px) {
+  .hid {
+    display: block;
+  }
 }
   </style>
 </head>
@@ -489,7 +495,7 @@ a {
                     <li class="music-name col-5 col-md-6">
                         <span v-text="song.songName">1 Demons</span>
                         <div class="music-controler">
-                            <i class="icon-play hid" @click="playM(index)"></i>
+                            <i class="icon-play hid" id="playIcon" @click="playM(index)"></i>
                         </div>
                     </li>
                     <li class="music-singer col-5 col-md-4">imagine dragons</li>
@@ -544,7 +550,6 @@ a {
   created: function() {
           this.init();
       }
-
     })
   </script>
 </body>
